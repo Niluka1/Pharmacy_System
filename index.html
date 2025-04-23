@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+	<title>My Pharmacy Website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="ionicons/css/ionicons.min.css">
+    <!--<script src="login.js"></script>-->
+    
+
+
+</head>
+<body>
+    <main>
+	<!-- Home Section -->
+	<section id="home">
+		<div class="container square-container">
+            <nav class="top-nav">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#" onclick="toggleNavBar()">Menu</a></li>
+
+                </ul>
+              </nav>
+			<div class="content">
+                <p class="tagline">Better Health, Better Life</p>
+				<h1>Your Trusted Partner in Health and Wellness</h1>
+				<p class="description">At our pharmacy, we belive in providing top-notch healthcare services, products to out customers,with a team of highly trained professionals and a wide range of medications, we struve to help you live a healthy and fulfilling life</p>
+				<button  id="action-button" onclick="document.getElementById('id01').style.display='block'">Explore</button>
+			</div>
+		</div>
+		<div class="container horizontal-container">
+            <ul class="nav-icons">
+              <li><a href="medicine.html"><ion-icon name="medkit-outline"></ion-icon>Medicine</a></li>
+              <li><a href="#"><ion-icon name="heart-half-outline"></ion-icon>Health</a></li>
+              <li><a href="services.html"><ion-icon name="reader-outline"></ion-icon>Services</a></li>
+              <li><a href="contact.html"><ion-icon name="people-outline"></ion-icon>Contact</a></li>
+              <li><a href="#" id="support"><ion-icon name="help-buoy-outline" alt="Support Icon"></ion-icon>Support</a></li>
+            </ul>
+          </div>
+
+          <div id="popup" class="hidden">
+            <h2>Need help?</h2>
+            <p>Our support team is available 24/7 to assist you.</p>
+            <button id="close-btn">Close</button>
+            
+          </div>
+
+          <!-- login/register form  -->
+    <div id="id01" class="modal">
+      <div class="container-form">
+          <form class="modal-content animate" action="loginphp.php" method="post">
+              <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                      title="Close Modal">&times;</span>
+                  <img src="login.jpg" alt="Login" class="login">
+              </div>
+
+              <div class="container-log">
+                  <label for="username"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="username" required>
+<br>
+                  <label for="password"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="password" required>
+
+                  <button type="submit">Login</button>
+                  <label>
+                      <input type="checkbox" checked="checked" name="remember" > Remember me
+                  </label>
+              </div>
+
+              <div class="container-log" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                      class="cancelbtn">Cancel</button>
+                  <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+          </form>
+      </div>
+  </div>
+          
+	</section>
+	<!-- About Us Section -->
+	<section id="about-us">
+		<div class="container about-us-container">
+			<div class="content">
+				<h2>About Us</h2>
+				<p>At our pharmacy, we are committed to providing the highest standards of healthcare and customer service to our patients. our tram of experienced healthcare profressionals are dedicated to meeting the needs of each and every patient,with focus on interfrity, compassion, and professionalism. we take pride in our recongnition for exceptional customer service and high-quality products, and are active in supporting our community throught charitable work and sponsorships
+                    <br><br>Additionally, the privacy of our patients's personal information is of the utmost imporatnce to us. We have implemented robust measures to ensure that this information is always protected. So that our patients can feel confident in choosing us for thir healthcare needs
+                </p>
+			</div>
+		</div>
+	</section>
+</main>
+   
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

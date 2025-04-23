@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pharmacy Services</title>
+
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    height: fit-content;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 1em;
+    text-align: center;
+    box-shadow: 1px 2px 10px rgba(56, 55, 55, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}
+section:hover {
+box-shadow: 1px 2px 10px rgba(56, 55, 55, 0.5);
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.service-btn {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.service-btn:hover {
+    background-color: #1e88e5;
+}
+
+.service-img {
+    max-width: 40%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.service-img img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Pharmacy Services</h1>
+    </header>
+    <main>
+        <section>
+            <img class="service-img" src="C:\Users\User\Desktop\m1.jpg" alt="Prescription Refills">
+            <h2>Prescription Refills</h2>
+            <p>We offer prescription refill services to help you stay on top of your medication needs. Just bring in
+                your prescription bottle and we'll take care of the rest.</p>
+            <button class="service-btn" data-service="refills">Learn More</button>
+        </section>
+        <section>
+            <img class="service-img" src="C:\Users\User\Desktop\m2.jpg" alt="Flu Shots">
+            <h2>Flu Shots</h2>
+            <p>Protect yourself and those around you by getting a flu shot at our pharmacy. We offer convenient walk-in
+                appointments and accept most insurance plans.</p>
+            <button class="service-btn" data-service="flu-shots">Learn More</button>
+        </section>
+        <section>
+            <img class="service-img" src="C:\Users\User\Desktop\m3.jpg" alt="Medication Reviews">
+            <h2>Medication Reviews</h2>
+            <p>Our pharmacists can help you better understand your medications and identify any potential interactions
+                or side effects. Schedule a medication review today.</p>
+            <button class="service-btn" data-service="medication-reviews">Learn More</button>
+        </section>
+    </main>
+
+    
+    <script>
+
+        const serviceBtns = document.querySelectorAll('.service-btn');
+
+        function showServiceDetails(serviceName) {
+            // Replace with code to show details of the selected service
+            console.log(`Showing details for ${serviceName}`);
+        }
+
+        serviceBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const serviceName = btn.getAttribute('data-service');
+                showServiceDetails(serviceName);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
